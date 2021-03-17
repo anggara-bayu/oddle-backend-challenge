@@ -1,0 +1,168 @@
+{
+	"info": {
+		"_postman_id": "6426138d-2773-4a3f-87a5-82d427d4b563",
+		"name": "Weather",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "greetings",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}",
+					"host": [
+						"{{base_url}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-weather",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/weather?city=jakarta",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"weather"
+					],
+					"query": [
+						{
+							"key": "city",
+							"value": "jakarta"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "save-weather",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cod\": 201,\r\n    \"base\": \"stations\",\r\n    \"visibility\": 4000,\r\n    \"wind\": {\r\n        \"speed\": 0.87,\r\n        \"gust\": 1.39,\r\n        \"degree\": 325.0\r\n    },\r\n    \"clouds\": {\r\n        \"cloudiness\": 20\r\n    },\r\n    \"weather\": [\r\n        {\r\n            \"id\": 721,\r\n            \"description\": \"haze\",\r\n            \"icon\": \"50d\",\r\n            \"group\": \"Haze\"\r\n        }\r\n    ],\r\n    \"cityId\": 1642912,\r\n    \"cityName\": \"Bandung\",\r\n    \"timeZone\": 25200,\r\n    \"coordinate\": {\r\n        \"longitude\": 106.8451,\r\n        \"latitude\": -6.2146\r\n    },\r\n    \"systemData\": {\r\n        \"id\": 9383,\r\n        \"type\": 1,\r\n        \"countryCode\": \"ID\",\r\n        \"sunriseTime\": 1615849035,\r\n        \"sunsetTime\": 1615892729\r\n    },\r\n    \"calculationDateTime\": 1615861549,\r\n    \"mainData\": {\r\n        \"pressure\": 1011,\r\n        \"humidity\": 74,\r\n        \"temperature\": 301.79,\r\n        \"feelsLike\": 306.73,\r\n        \"minTemperature\": 300.93,\r\n        \"maxTemperature\": 302.15\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/save-weather",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"save-weather"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-historical-weather-data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/historical-weather-data",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"historical-weather-data"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update-weather",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cod\": 201,\r\n    \"base\": \"stations\",\r\n    \"visibility\": 4000,\r\n    \"wind\": {\r\n        \"speed\": 0.87,\r\n        \"gust\": 1.39,\r\n        \"degree\": 325.0\r\n    },\r\n    \"clouds\": {\r\n        \"cloudiness\": 20\r\n    },\r\n    \"weather\": [\r\n        {\r\n            \"id\": 721,\r\n            \"description\": \"haze\",\r\n            \"icon\": \"50d\",\r\n            \"group\": \"Haze\"\r\n        }\r\n    ],\r\n    \"cityId\": 1642912,\r\n    \"cityName\": \"Bandung\",\r\n    \"timeZone\": 25200,\r\n    \"coordinate\": {\r\n        \"longitude\": 106.8451,\r\n        \"latitude\": -6.2146\r\n    },\r\n    \"systemData\": {\r\n        \"id\": 9383,\r\n        \"type\": 1,\r\n        \"countryCode\": \"ID\",\r\n        \"sunriseTime\": 1615849035,\r\n        \"sunsetTime\": 1615892729\r\n    },\r\n    \"calculationDateTime\": 1615861549,\r\n    \"mainData\": {\r\n        \"pressure\": 1011,\r\n        \"humidity\": 74,\r\n        \"temperature\": 301.79,\r\n        \"feelsLike\": 306.73,\r\n        \"minTemperature\": 300.93,\r\n        \"maxTemperature\": 302.15\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/update-weather",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"update-weather"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete-weather",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/delete-weather?cityId=1642912&calculationDatetime=1615861549",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"delete-weather"
+					],
+					"query": [
+						{
+							"key": "cityId",
+							"value": "1642912"
+						},
+						{
+							"key": "calculationDatetime",
+							"value": "1615861549"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:8080"
+		}
+	]
+}

@@ -73,3 +73,6 @@ https://openweathermap.org/current
 * Code. Commit and Push as many times as you want, only the last Pull Request will be graded
 * Create a Pull Request in your private repo and invite us as reviewer
 * Add https://github.com/oddle-developer as collaborator for your repo and add `oddle-developer` as reviewer to your PR
+
+## Bayu Notes
+* I have added the sql script and the example of how to use the API in json file (Weather.postman_collection.json). You can find both files in the root folder of this project
